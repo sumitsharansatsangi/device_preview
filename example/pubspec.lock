@@ -89,10 +89,11 @@ packages:
   flutter_lints:
     dependency: "direct dev"
     description:
-      name: flutter_lints
-      sha256: a25a15ebbdfc33ab1cd26c63a6ee519df92338a9c10f122adda92938253bef04
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "839a835b4577b79bee3803328154b54bda02d646"
+      url: "https://github.com/kumsumit/flutter_lints.git"
+    source: git
     version: "2.0.3"
   flutter_localizations:
     dependency: transitive
@@ -116,18 +117,19 @@ packages:
     dependency: transitive
     description:
       name: get
-      sha256: "2ba20a47c8f1f233bed775ba2dd0d3ac97b4cf32fc17731b3dfc672b06b0e92a"
+      sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
       url: "https://pub.dev"
     source: hosted
-    version: "4.6.5"
+    version: "4.6.6"
   get_storage:
     dependency: transitive
     description:
-      name: get_storage
-      sha256: "39db1fffe779d0c22b3a744376e86febe4ade43bf65e06eab5af707dc84185a2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.1"
+      path: "."
+      ref: HEAD
+      resolved-ref: a4a61ebde43a5d07f073ade143257c22f5cb66fd
+      url: "https://github.com/sumitsharansatsangi/get_storage.git"
+    source: git
+    version: "2.1.0"
   intl:
     dependency: transitive
     description:
@@ -195,50 +197,56 @@ packages:
   path_provider:
     dependency: transitive
     description:
-      name: path_provider
-      sha256: a1aa8aaa2542a6bc57e381f132af822420216c80d4781f7aa085ca3229208aaa
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: b61812490204279e39c3319aaca9509e93134bdb
+      url: "https://github.com/kumsumit/path_provider.git"
+    source: git
     version: "2.1.1"
   path_provider_android:
     dependency: transitive
     description:
-      name: path_provider_android
-      sha256: "6b8b19bd80da4f11ce91b2d1fb931f3006911477cec227cce23d3253d80df3f1"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: e2f766fe5ae3f378b2335786cbc9d77fb1921a55
+      url: "https://github.com/kumsumit/path_provider_android.git"
+    source: git
     version: "2.2.0"
   path_provider_foundation:
     dependency: transitive
     description:
-      name: path_provider_foundation
-      sha256: "19314d595120f82aca0ba62787d58dde2cc6b5df7d2f0daf72489e38d1b57f2d"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: d03469b9c2e33ae3766e3b211fa51688e8fd3b35
+      url: "https://github.com/kumsumit/path_provider_foundation.git"
+    source: git
     version: "2.3.1"
   path_provider_linux:
     dependency: transitive
     description:
-      name: path_provider_linux
-      sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: b8224d82f726a802061c8b97484073fd42c031d4
+      url: "https://github.com/kumsumit/path_provider_linux.git"
+    source: git
     version: "2.2.1"
   path_provider_platform_interface:
     dependency: transitive
     description:
-      name: path_provider_platform_interface
-      sha256: "94b1e0dd80970c1ce43d5d4e050a9918fce4f4a775e6142424c30a29a363265c"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "651bf928de545c4bd4903d8a9515c22602874856"
+      url: "https://github.com/kumsumit/path_provider_platform_interface.git"
+    source: git
     version: "2.1.1"
   path_provider_windows:
     dependency: transitive
     description:
-      name: path_provider_windows
-      sha256: "8bc9f22eee8690981c22aa7fc602f5c85b497a6fb2ceb35ee5a5e5ed85ad8170"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: ed44a91bd80fef05cbb4de655f62bc2cd12a6108
+      url: "https://github.com/kumsumit/path_provider_windows.git"
+    source: git
     version: "2.2.1"
   platform:
     dependency: transitive
@@ -251,10 +259,11 @@ packages:
   plugin_platform_interface:
     dependency: transitive
     description:
-      name: plugin_platform_interface
-      sha256: da3fdfeccc4d4ff2da8f8c556704c08f912542c5fb3cf2233ed75372384a034d
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "1d6e1c5fae93958d50ce0595ef687d8195088d21"
+      url: "https://github.com/kumsumit/plugin_platform_interface.git"
+    source: git
     version: "2.1.6"
   provider:
     dependency: transitive
@@ -344,11 +353,12 @@ packages:
   xdg_directories:
     dependency: transitive
     description:
-      name: xdg_directories
-      sha256: "589ada45ba9e39405c198fe34eb0f607cddb2108527e658136120892beac46d2"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "410932cf9651a439aa3e2c2f21098cc61e6daa8a"
+      url: "https://github.com/kumsumit/xdg_directories.git"
+    source: git
     version: "1.0.3"
 sdks:
   dart: ">=3.1.0 <4.0.0"
-  flutter: ">=3.7.0"
+  flutter: ">=3.13.0"
