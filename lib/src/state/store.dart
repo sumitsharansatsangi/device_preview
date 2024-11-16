@@ -74,7 +74,7 @@ class DevicePreviewStore extends ChangeNotifier {
 
         final defaultLocale = device_preview
             .basicLocaleListResolution(
-              WidgetsBinding.instance.window.locales,
+              WidgetsBinding.instance.platformDispatcher.locales,
               availaiableLocales.map((x) => x!.locale).toList(),
             )
             .toString();
