@@ -6,15 +6,15 @@ class MediaQueryObserver extends StatefulWidget {
   final Widget child;
 
   const MediaQueryObserver({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
-  MediaQueryObserverState createState() => MediaQueryObserverState();
+  _MediaQueryObserverState createState() => _MediaQueryObserverState();
 }
 
-class MediaQueryObserverState extends State<MediaQueryObserver>
+class _MediaQueryObserverState extends State<MediaQueryObserver>
     with WidgetsBindingObserver {
   @override
   void didChangeMetrics() {

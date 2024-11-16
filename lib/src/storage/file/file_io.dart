@@ -26,7 +26,9 @@ class FileDevicePreviewStorage extends DevicePreviewStorage {
   /// Load the last saved preferences.
   @override
   Future<DevicePreviewData?> load() async {
-    final json = await File(filePath).readAsString();
+     final file =File(filePath);
+      if (!await file.exists()) await file.create(recursive: true);
+    final json = await file.readAsString();
     if (json.isEmpty) return null;
     return DevicePreviewData.fromJson(jsonDecode(json));
   }
@@ -38,7 +40,9 @@ class FileDevicePreviewStorage extends DevicePreviewStorage {
   Future _save() async {
     await Future.delayed(const Duration(milliseconds: 500));
     if (_saveData != null) {
-      await File(filePath).writeAsString(jsonEncode(_saveData!.toJson()));
+      final file =File(filePath);
+      if (!await file.exists()) await file.create(recursive: true);
+      await file.writeAsString(jsonEncode(_saveData!.toJson()),);
     }
     _saveTask = null;
   }

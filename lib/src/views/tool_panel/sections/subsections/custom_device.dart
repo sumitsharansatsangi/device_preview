@@ -82,12 +82,14 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
                   title: 'Change Width',
                 ).then((value) {
                   if (value == null) return;
+                  if(context.mounted){
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(value, customDevice.screenSize.height),
                     ),
                   );
+                  }
                 });
               },
               child: Text(customDevice.screenSize.width.toString()),
@@ -118,12 +120,14 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
                   title: 'Change Height',
                 ).then((value) {
                   if (value == null) return;
+                  if(context.mounted){
                   final store = context.read<DevicePreviewStore>();
                   store.updateCustomDevice(
                     customDevice.copyWith(
                       screenSize: Size(customDevice.screenSize.width, value),
                     ),
                   );
+                  }
                 });
               },
             ),
@@ -249,7 +253,7 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
           (p) => ListTile(
             leading: TargetPlatformIcon(platform: p),
             title: Text(
-              describeEnum(p),
+              p.name,
             ),
             onTap: () {
               final store = context.read<DevicePreviewStore>();
@@ -274,7 +278,7 @@ List<Widget> buildCustomDeviceTiles(BuildContext context) {
               type: type,
             ),
             title: Text(
-              describeEnum(type),
+              type.name,
             ),
             onTap: () {
               final store = context.read<DevicePreviewStore>();

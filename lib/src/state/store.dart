@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/widgets.dart';
-
 import '../../device_preview.dart';
 import 'custom_device.dart';
 import '../../device_preview.dart' as device_preview;

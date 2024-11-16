@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui' as ui;
 
 import 'package:device_frame/device_frame.dart';
 import 'package:device_preview/src/state/state.dart';
@@ -16,7 +17,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-import 'dart:ui' as ui;
 
 import 'locales/default_locales.dart';
 import 'utilities/screenshot.dart';
@@ -49,7 +49,7 @@ import 'views/small.dart';
 class DevicePreview extends StatefulWidget {
   /// Create a new [DevicePreview].
   const DevicePreview({
-    Key? key,
+    super.key,
     required this.builder,
     this.devices,
     this.data,
@@ -60,7 +60,7 @@ class DevicePreview extends StatefulWidget {
     this.storage,
     this.enabled = true,
     this.backgroundColor,
-  }) : super(key: key);
+  });
 
   /// If not [enabled], the [child] is used directly.
   final bool enabled;
@@ -337,8 +337,7 @@ class DevicePreview extends StatefulWidget {
 
     return mediaQuery.copyWith(
       platformBrightness: isDarkMode ? Brightness.dark : Brightness.light,
-      textScaleFactor: textScaleFactor,
-      boldText: boldText,
+      boldText: boldText, textScaler: TextScaler.linear(textScaleFactor),
       disableAnimations: disableAnimations,
       accessibleNavigation: accessibleNavigation,
       invertColors: invertColors,
@@ -350,7 +349,7 @@ class _DevicePreviewState extends State<DevicePreview> {
   bool _isToolPanelPopOverOpen = false;
 
   late DevicePreviewStorage storage =
-      widget.storage ?? DevicePreviewStorage.preferences();
+      widget.storage ?? DevicePreviewStorage.none();
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -570,7 +569,7 @@ class _DevicePreviewState extends State<DevicePreview> {
                         if (isToolbarVisible && !isSmall)
                           Positioned.fill(
                             key: const Key('Large'),
-                            child: DervicePreviewLargeLayout(
+                            child: DevicePreviewLargeLayout(
                               slivers: widget.tools,
                             ),
                           ),

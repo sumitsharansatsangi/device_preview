@@ -10,10 +10,10 @@ class SettingsSection extends StatelessWidget {
   ///
   /// The items can be hidden with [backgroundTheme], [toolsTheme] parameters.
   const SettingsSection({
-    Key? key,
+    super.key,
     this.backgroundTheme = true,
     this.toolsTheme = true,
-  }) : super(key: key);
+  });
 
   /// Allow to edit the current background theme.
   final bool backgroundTheme;
@@ -50,7 +50,7 @@ class SettingsSection extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: background.scaffoldBackgroundColor,
                 border: Border.all(
-                  color: toolbar.colorScheme.background,
+                  color: toolbar.colorScheme.surface,
                   width: 1,
                 ),
               ),
@@ -81,7 +81,7 @@ class SettingsSection extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: toolbar.scaffoldBackgroundColor,
                 border: Border.all(
-                  color: toolbar.colorScheme.background,
+                  color: toolbar.colorScheme.surface,
                   width: 1,
                 ),
               ),
